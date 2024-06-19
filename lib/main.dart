@@ -1,3 +1,5 @@
+import 'package:challenge_crew_app_flutter/screens/login_screen.dart';
+import 'package:challenge_crew_app_flutter/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +11,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      initialRoute: LoginScreen.id,
+      routes: {
+        LoginScreen.id: (context) => const LoginScreen(),
+        RegistrationScreen.id: (context) => const RegistrationScreen(),
+      },
     );
   }
 }
