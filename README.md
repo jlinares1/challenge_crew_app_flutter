@@ -1,3 +1,10 @@
-# challenge_crew_app_flutter
+# Challenge Crew
 
-A new Flutter project.
+### *UNDER CONSTRUCTION*
+
+## Overview
+- Challenge Crew app will allow users to set up workout challeneges to complete with other users or their friends.
+- The user will be able to track their goals.
+
+## Built In
+- Flutter
