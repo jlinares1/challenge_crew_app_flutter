@@ -1,6 +1,8 @@
+import 'package:challenge_crew_app_flutter/screens/profile_creation_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:challenge_crew_app_flutter/screens/home_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/login_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/registration_screen.dart';
-import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,6 +18,8 @@ class MainApp extends StatelessWidget {
       routes: {
         LoginScreen.id: (context) => const LoginScreen(),
         RegistrationScreen.id: (context) => const RegistrationScreen(),
+        HomeScreen.id: (context) => const HomeScreen(),
+        ProfileCreationScreen.id: (context) => const ProfileCreationScreen()
       },
     );
   }
