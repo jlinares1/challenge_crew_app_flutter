@@ -6,11 +6,13 @@ class InputButton extends StatelessWidget {
       {super.key,
       required this.inputText,
       required this.textInputCallBack,
-      this.inputIcon});
+      this.inputIcon,
+      this.keyboardType});
 
   final void Function(String)? textInputCallBack;
   final String inputText;
   final IconData? inputIcon;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +35,7 @@ class InputButton extends StatelessWidget {
               ),
             ),
             onChanged: textInputCallBack,
+            keyboardType: keyboardType,
           ),
         ],
       ),

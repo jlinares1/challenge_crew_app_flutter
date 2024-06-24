@@ -1,4 +1,5 @@
 import 'package:challenge_crew_app_flutter/components/input_button.dart';
+import 'package:challenge_crew_app_flutter/components/proceed_button.dart';
 import 'package:challenge_crew_app_flutter/screens/home_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
@@ -39,6 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
               inputText: 'Email Address',
               textInputCallBack: null,
               inputIcon: Icons.email,
+              keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(height: 30.0),
             const InputButton(
@@ -47,21 +49,13 @@ class _LoginScreenState extends State<LoginScreen> {
               inputIcon: Icons.remove_red_eye,
             ),
             const SizedBox(height: 60.0),
-            SizedBox(
-              height: 50,
-              width: double.infinity,
-              child: TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, HomeScreen.id);
-                  },
-                  style: const ButtonStyle(
-                      backgroundColor:
-                          MaterialStatePropertyAll(Colors.blueGrey)),
-                  child: const Text(
-                    'Log In',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  )),
-            ),
+            ProceedButton(
+                buttonName: 'Log In',
+                paddingValue: 0,
+                onPressed: () {
+                  Navigator.pushNamed(context, HomeScreen.id);
+                },
+                buttonColor: Colors.blueGrey),
             const SizedBox(height: 30.0),
             Center(
                 child: Column(
@@ -70,25 +64,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   'Dont have an account?',
                   style: TextStyle(fontSize: 16),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: SizedBox(
-                    height: 50,
-                    width: double.infinity,
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, RegistrationScreen.id);
-                        },
-                        style: const ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.grey),
-                        ),
-                        child: const Text(
-                          'Register',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                        )),
-                  ),
-                )
+                ProceedButton(
+                  buttonName: 'Register',
+                  paddingValue: 10,
+                  onPressed: () {
+                    Navigator.pushNamed(context, RegistrationScreen.id);
+                  },
+                  buttonColor: Colors.grey,
+                ),
               ],
             )),
           ],

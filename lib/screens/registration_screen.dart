@@ -1,4 +1,5 @@
 import 'package:challenge_crew_app_flutter/components/input_button.dart';
+import 'package:challenge_crew_app_flutter/components/proceed_button.dart';
 import 'package:challenge_crew_app_flutter/screens/profile_creation_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -36,29 +37,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const InputButton(inputText: 'Last Name', textInputCallBack: null),
             const SizedBox(height: 15),
             const InputButton(
-                inputText: 'Email Address', textInputCallBack: null),
+              inputText: 'Email Address',
+              textInputCallBack: null,
+              keyboardType: TextInputType.emailAddress,
+            ),
             const SizedBox(height: 15),
             const InputButton(inputText: 'Password', textInputCallBack: null),
             const SizedBox(height: 15),
             const InputButton(
                 inputText: 'Confirm Password', textInputCallBack: null),
-            Padding(
-              padding: const EdgeInsets.only(top: 100),
-              child: SizedBox(
-                height: 50,
-                width: double.infinity,
-                child: TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, ProfileCreationScreen.id);
-                    },
-                    style: const ButtonStyle(
-                        backgroundColor:
-                            MaterialStatePropertyAll(Colors.blueGrey)),
-                    child: const Text(
-                      'Next',
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    )),
-              ),
+            ProceedButton(
+              buttonName: 'Next',
+              paddingValue: 100,
+              onPressed: () {
+                Navigator.pushNamed(context, ProfileCreationScreen.id);
+              },
+              buttonColor: Colors.blueGrey,
             )
           ],
         ),
