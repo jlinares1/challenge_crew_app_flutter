@@ -42,21 +42,22 @@ class _LoginScreenState extends State<LoginScreen> {
               inputIcon: Icons.email,
               keyboardType: TextInputType.emailAddress,
             ),
-            const SizedBox(height: 30.0),
+            const SizedBox(height: 15.0),
             const InputButton(
               inputText: 'Password',
               textInputCallBack: null,
               inputIcon: Icons.remove_red_eye,
             ),
-            const SizedBox(height: 60.0),
+            const SizedBox(height: 50.0),
             ProceedButton(
-                buttonName: 'Log In',
-                paddingValue: 0,
-                onPressed: () {
-                  Navigator.pushNamed(context, HomeScreen.id);
-                },
-                buttonColor: Colors.blueGrey),
-            const SizedBox(height: 30.0),
+              buttonName: 'Log In',
+              paddingValue: 0,
+              onPressed: () {
+                Navigator.pushNamed(context, HomeScreen.id);
+              },
+              isPrimaryButton: true,
+            ),
+            const SizedBox(height: 20.0),
             Center(
                 child: Column(
               children: [
@@ -70,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     Navigator.pushNamed(context, RegistrationScreen.id);
                   },
-                  buttonColor: Colors.grey,
+                  isPrimaryButton: false,
                 ),
               ],
             )),

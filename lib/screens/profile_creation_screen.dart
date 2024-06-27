@@ -25,6 +25,7 @@ class _ProfileCreationScreenState extends State<ProfileCreationScreen> {
       appBar: AppBar(
         title: const Text('Profile'),
         backgroundColor: Colors.blueGrey,
+        elevation: 0,
       ),
       body: SafeArea(
         minimum: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 24.0),
@@ -94,11 +95,11 @@ class _ProfileCreationScreenState extends State<ProfileCreationScreen> {
             ),
             ProceedButton(
               buttonName: 'Create Profile',
-              paddingValue: 20,
+              paddingValue: 50,
               onPressed: () {
                 Navigator.pushNamed(context, HomeScreen.id);
               },
-              buttonColor: Colors.blueGrey,
+              isPrimaryButton: true,
             )
           ],
         ),

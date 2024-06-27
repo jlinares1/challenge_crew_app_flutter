@@ -20,6 +20,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       appBar: AppBar(
         title: const Text('User Account'),
         backgroundColor: Colors.blueGrey,
+        elevation: 0,
       ),
       body: SafeArea(
         minimum: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 24.0),
@@ -31,7 +32,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     color: Colors.black,
                     fontSize: 24,
                     fontWeight: FontWeight.w600)),
-            const SizedBox(height: 15),
+            const SizedBox(height: 50),
             const InputButton(inputText: 'First Name', textInputCallBack: null),
             const SizedBox(height: 15),
             const InputButton(inputText: 'Last Name', textInputCallBack: null),
@@ -48,11 +49,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 inputText: 'Confirm Password', textInputCallBack: null),
             ProceedButton(
               buttonName: 'Next',
-              paddingValue: 100,
+              paddingValue: 50,
               onPressed: () {
                 Navigator.pushNamed(context, ProfileCreationScreen.id);
               },
-              buttonColor: Colors.blueGrey,
+              isPrimaryButton: true,
             )
           ],
         ),

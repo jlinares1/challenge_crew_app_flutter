@@ -1,3 +1,4 @@
+import 'package:challenge_crew_app_flutter/constants.dart';
 import 'package:flutter/material.dart';
 
 class ProceedButton extends StatelessWidget {
@@ -6,12 +7,12 @@ class ProceedButton extends StatelessWidget {
       required this.buttonName,
       required this.paddingValue,
       required this.onPressed,
-      required this.buttonColor});
+      required this.isPrimaryButton});
 
   final double paddingValue;
   final VoidCallback onPressed;
   final String buttonName;
-  final Color buttonColor;
+  final bool isPrimaryButton;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +23,13 @@ class ProceedButton extends StatelessWidget {
         width: double.infinity,
         child: TextButton(
             onPressed: onPressed,
-            style: ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(buttonColor)),
+            style:
+                isPrimaryButton ? kPrimaryButtonStyle : kSecondaryButtonStyle,
             child: Text(
               buttonName,
-              style: const TextStyle(color: Colors.white, fontSize: 16),
+              style: isPrimaryButton
+                  ? kPrimaryButtonTextStyle
+                  : kSecondaryButtonTextStyle,
             )),
       ),
     );

@@ -36,6 +36,10 @@ class InputButton extends StatelessWidget {
             ),
             onChanged: textInputCallBack,
             keyboardType: keyboardType,
+            onTapOutside: (PointerDownEvent event) {
+              //Dismisses keyboard once you click outside of input field
+              FocusManager.instance.primaryFocus?.unfocus();
+            },
           ),
         ],
       ),
