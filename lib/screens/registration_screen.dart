@@ -2,6 +2,7 @@ import 'package:challenge_crew_app_flutter/components/input_button.dart';
 import 'package:challenge_crew_app_flutter/components/proceed_button.dart';
 import 'package:challenge_crew_app_flutter/screens/profile_creation_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static const String id = 'registration_screen';
@@ -18,7 +19,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('User Account'),
+        title: const Text(
+          'User Account',
+        ),
         backgroundColor: Colors.blueGrey,
         elevation: 0,
       ),
@@ -51,7 +54,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               buttonName: 'Next',
               paddingValue: 50,
               onPressed: () {
-                Navigator.pushNamed(context, ProfileCreationScreen.id);
+                context.pushNamed(ProfileCreationScreen.id);
               },
               isPrimaryButton: true,
             )

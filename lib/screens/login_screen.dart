@@ -3,6 +3,7 @@ import 'package:challenge_crew_app_flutter/components/proceed_button.dart';
 import 'package:challenge_crew_app_flutter/screens/home_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';
@@ -53,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
               buttonName: 'Log In',
               paddingValue: 0,
               onPressed: () {
-                Navigator.pushNamed(context, HomeScreen.id);
+                context.goNamed(HomeScreen.id);
               },
               isPrimaryButton: true,
             ),
@@ -69,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   buttonName: 'Register',
                   paddingValue: 10,
                   onPressed: () {
-                    Navigator.pushNamed(context, RegistrationScreen.id);
+                    context.pushNamed(RegistrationScreen.id);
                   },
                   isPrimaryButton: false,
                 ),

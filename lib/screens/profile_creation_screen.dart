@@ -4,6 +4,7 @@ import 'package:challenge_crew_app_flutter/constants.dart';
 import 'package:challenge_crew_app_flutter/screens/home_screen.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ProfileCreationScreen extends StatefulWidget {
   static const String id = 'profile_creation_screen';
@@ -97,7 +98,7 @@ class _ProfileCreationScreenState extends State<ProfileCreationScreen> {
               buttonName: 'Create Profile',
               paddingValue: 50,
               onPressed: () {
-                Navigator.pushNamed(context, HomeScreen.id);
+                context.pushNamed(HomeScreen.id);
               },
               isPrimaryButton: true,
             )

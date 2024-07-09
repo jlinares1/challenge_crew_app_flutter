@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ChallengeScreen extends StatefulWidget {
+  static const String id = 'challenge_screen';
   const ChallengeScreen({super.key});
 
   @override

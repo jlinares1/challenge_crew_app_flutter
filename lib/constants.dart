@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 const kPrimaryButtonStyle = ButtonStyle(
-    backgroundColor: MaterialStatePropertyAll(Colors.blueGrey),
-    shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+    backgroundColor: WidgetStatePropertyAll(Colors.blueGrey),
+    shape: WidgetStatePropertyAll(RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(5)))));
 
 const kPrimaryButtonTextStyle = TextStyle(color: Colors.white, fontSize: 16);
 
 const kSecondaryButtonStyle = ButtonStyle(
-  shape: MaterialStatePropertyAll(
+  shape: WidgetStatePropertyAll(
     RoundedRectangleBorder(
       side: BorderSide(color: Colors.blueGrey, width: 2),
       borderRadius: BorderRadius.all(Radius.circular(5)),
