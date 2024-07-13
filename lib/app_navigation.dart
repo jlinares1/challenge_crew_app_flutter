@@ -1,9 +1,9 @@
-import 'package:challenge_crew_app_flutter/screens/bottom_tabs_nested_navigation.dart';
-import 'package:challenge_crew_app_flutter/screens/challenge_screen.dart';
-import 'package:challenge_crew_app_flutter/screens/home_screen.dart';
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/bottom_tabs_nested_navigation.dart';
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/challenge_screen.dart';
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/home_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/login_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/profile_creation_screen.dart';
-import 'package:challenge_crew_app_flutter/screens/profile_screen.dart';
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/profile_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/registration_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';

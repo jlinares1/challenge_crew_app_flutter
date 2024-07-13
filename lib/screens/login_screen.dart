@@ -1,6 +1,6 @@
 import 'package:challenge_crew_app_flutter/components/input_button.dart';
 import 'package:challenge_crew_app_flutter/components/proceed_button.dart';
-import 'package:challenge_crew_app_flutter/screens/home_screen.dart';
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/home_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
