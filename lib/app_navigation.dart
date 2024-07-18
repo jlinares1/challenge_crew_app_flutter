@@ -1,5 +1,6 @@
 import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/bottom_tabs_nested_navigation.dart';
 import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/challenge_screen.dart';
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/current_challenge_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/home_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/login_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/profile_creation_screen.dart';
@@ -49,11 +50,10 @@ class AppNavigation {
               navigatorKey: _shellNavigatorHomeKey,
               routes: [
                 GoRoute(
-                  name: HomeScreen.id,
-                  path: '/homeScreen',
-                  pageBuilder: (context, state) =>
-                      NoTransitionPage(child: HomeScreen()),
-                ),
+                    name: HomeScreen.id,
+                    path: '/homeScreen',
+                    pageBuilder: (context, state) =>
+                        NoTransitionPage(child: HomeScreen())),
               ],
             ),
             StatefulShellBranch(
@@ -78,7 +78,14 @@ class AppNavigation {
                 ),
               ],
             )
-          ])
+          ]),
+      GoRoute(
+        parentNavigatorKey: _rootNavigatorKey,
+        name: CurrentChallengeScreen.id,
+        path: '/currentChallengeScreen',
+        pageBuilder: (context, state) =>
+            NoTransitionPage(child: CurrentChallengeScreen()),
+      ),
     ],
   );
 }

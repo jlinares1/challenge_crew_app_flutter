@@ -1,4 +1,6 @@
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/current_challenge_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = 'home_screen';
@@ -41,9 +43,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 SizedBox(height: 15.0),
-                GestureDetector(
-                  onTap: () => null,
-                  child: Card(),
+                Card(
+                  color: Colors.blueGrey,
+                  child: InkWell(
+                    onTap: () => context.pushNamed(CurrentChallengeScreen.id),
+                    child: SizedBox(
+                      width: 500,
+                      height: 150,
+                      child: Center(
+                        child: Text('Challenge'),
+                      ),
+                    ),
+                  ),
                 )
               ],
             ),
