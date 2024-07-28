@@ -1,3 +1,4 @@
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/add_challenge_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/bottom_tabs_nested_navigation.dart';
 import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/challenge_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/current_challenge_screen.dart';
@@ -85,6 +86,13 @@ class AppNavigation {
         path: '/currentChallengeScreen',
         pageBuilder: (context, state) =>
             NoTransitionPage(child: CurrentChallengeScreen()),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootNavigatorKey,
+        name: AddChallengeScreen.id,
+        path: '/addChallengeScreen',
+        pageBuilder: (context, state) =>
+            NoTransitionPage(child: AddChallengeScreen()),
       ),
     ],
   );

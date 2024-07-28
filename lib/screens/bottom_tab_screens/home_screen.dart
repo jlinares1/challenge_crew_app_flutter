@@ -1,3 +1,4 @@
+import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/add_challenge_screen.dart';
 import 'package:challenge_crew_app_flutter/screens/bottom_tab_screens/current_challenge_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          minimum: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
+          minimum: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -27,13 +28,25 @@ class _HomeScreenState extends State<HomeScreen> {
                       backgroundImage:
                           AssetImage('images/generic_user_profile_image.jpg'),
                       backgroundColor: Colors.transparent,
-                      radius: 50,
+                      radius: 30,
                     ),
                     SizedBox(width: 15.0),
                     Text(
                       'Welcome,\n$userName',
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: IconButton(
+                            onPressed: () =>
+                                context.pushNamed(AddChallengeScreen.id),
+                            icon: Icon(
+                              Icons.add,
+                              size: 30,
+                            )),
+                      ),
                     ),
                   ],
                 ),
@@ -51,7 +64,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 500,
                       height: 150,
                       child: Center(
-                        child: Text('Challenge'),
+                        child: Text(
+                          'Under Construction',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),

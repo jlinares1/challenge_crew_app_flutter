@@ -14,7 +14,7 @@ class _CurrentChallengeScreenState extends State<CurrentChallengeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add/Update Challenge'),
+        title: Text('Update Challenge'),
       ),
     );
   }
